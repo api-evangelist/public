@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://public.com/mcp-trading
+server:
+  name: public
+  transport: http
+  url: https://mcp.public.com/mcp
+  auth:
+    type: oauth2
+    protected_resource: https://mcp.public.com/.well-known/oauth-protected-resource
+    authorization_server: https://prod-api.154310543964.hellopublic.com/userapiauthservice/oauth2
+    scopes: [trading.read, trading.write, marketdata, openid]
+    api_key_alt: https://public.com/settings/v2/api
+description: >-
+  Public's hosted, remote MCP server — described by Public as part of "the world's
+  first agentic brokerage." Lets AI assistants query portfolios and place trades on
+  a connected Public account across stocks, ETFs, options, crypto, bonds, and
+  treasuries. Connect in Claude via Settings > Connectors > Add custom connector;
+  in ChatGPT via Settings > Apps (OAuth); Perplexity uses an API key.
+capabilities:
+- Query portfolio performance and holdings analysis
+- Execute trades across stocks, ETFs, options, crypto, and bonds
+- Rebalance portfolios to target allocations
+- Screen for investment opportunities
+- Set conditional/trigger-based trading logic
+- Track deposits, withdrawals, and account activity

@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://public.com/api/docs/quickstart
+docs: https://public.com/api/docs/resources/authorization/create-personal-access-token
+summary:
+  types: [http, oauth2]
+  http_schemes: [bearer]
+  bearer_format: JWT
+  oauth2_flows: [authorizationCode]
+schemes:
+- name: PersonalAccessToken
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  description: >-
+    Primary auth for the direct Trading API. A long-lived, revocable secret key
+    is generated in account settings (https://public.com/settings/v2/api), then
+    exchanged for a short-lived access-token JWT via
+    POST https://api.public.com/userapiauthservice/personal/access-tokens
+    (body: {secret, validityInMinutes}; default validity 15 min). The returned
+    accessToken is sent as `Authorization: Bearer <token>` on gateway calls under
+    https://api.public.com/userapigateway/trading/.
+  sources: [https://public.com/api/docs/quickstart]
+- name: OAuth2
+  type: oauth2
+  description: >-
+    Used by the hosted MCP server (mcp.public.com) for AI-assistant connectors
+    (Claude, ChatGPT). Authorization server:
+    https://prod-api.154310543964.hellopublic.com/userapiauthservice/oauth2.
+    Scopes: trading.read, trading.write, marketdata, openid (see scopes/).
+  sources: [https://mcp.public.com/.well-known/oauth-protected-resource]

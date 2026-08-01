@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://mcp.public.com/.well-known/oauth-protected-resource
+docs: https://public.com/api/docs
+note: >-
+  Scopes advertised by Public's hosted MCP server via its RFC 9728 OAuth 2.0
+  Protected Resource metadata. The MCP OAuth flow (used by Claude/ChatGPT
+  connectors) authorizes against the Public authorization server below. The
+  direct Trading API (api.public.com) instead uses personal secret keys
+  exchanged for short-lived bearer JWTs (see authentication/).
+schemes:
+- name: OAuth2
+  source: https://mcp.public.com/.well-known/oauth-protected-resource
+  authorization_servers:
+  - https://prod-api.154310543964.hellopublic.com/userapiauthservice/oauth2
+  bearer_methods_supported:
+  - header
+scopes:
+- scope: trading.read
+  description: Read access to accounts, portfolio, positions, and order/transaction history.
+  sources: [mcp.public.com oauth-protected-resource]
+- scope: trading.write
+  description: Place, replace, and cancel orders and perform trading actions on the account.
+  sources: [mcp.public.com oauth-protected-resource]
+- scope: marketdata
+  description: Access real-time and historical market data (quotes, bars, option chains, greeks).
+  sources: [mcp.public.com oauth-protected-resource]
+- scope: openid
+  description: OpenID Connect authentication of the connecting user/agent.
+  sources: [mcp.public.com oauth-protected-resource]

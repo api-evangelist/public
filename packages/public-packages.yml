@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://public.com/api/docs/sdks-and-tools
+packages:
+- language: python
+  registry: pypi
+  name: publicdotcom-py
+  url: https://pypi.org/project/publicdotcom-py/
+  repo: https://github.com/PublicDotCom/publicdotcom-py
+  install: pip install publicdotcom-py
+  license: Apache-2.0
+  official: true
+  description: >-
+    Official Python SDK for the Public Trading API. Provides sync and async
+    clients for accounts, portfolio, market data (quotes, bars, option chains,
+    greeks), order placement/replace/cancel, and real-time price subscriptions.
+- language: python
+  registry: pypi
+  name: publicdotcom-cli
+  url: https://pypi.org/project/publicdotcom-cli/
+  repo: https://github.com/PublicDotCom/publicdotcom-cli
+  install: pipx install publicdotcom-cli
+  license: Apache-2.0
+  official: true
+  description: >-
+    Official command-line interface for the Public Trading API (also installable
+    via `uv tool install publicdotcom-cli`). Binary command surface catalogued in
+    cli/public-cli.yml.

@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/PublicDotCom/publicdotcom-cli
+name: publicdotcom-cli
+license: Apache-2.0
+repo: https://github.com/PublicDotCom/publicdotcom-cli
+package: packages/public-packages.yml
+install:
+- method: pipx
+  command: pipx install publicdotcom-cli
+- method: uv
+  command: uv tool install publicdotcom-cli
+command_groups:
+- group: auth
+  commands: [login, logout, refresh]
+- group: accounts
+  commands: [list, set-default, get-default, clear-default]
+- group: portfolio
+  commands: [show]
+- group: market
+  commands: [quotes, option-expirations, option-chain]
+- group: instruments
+  commands: [get]
+- group: options
+  commands: [greeks]
+- group: historicdata
+  commands: [bars]
+- group: order
+  commands: [preflight-single, place, get, cancel]
+- group: history
+  commands: [list]

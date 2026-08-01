@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on Public hosts
+hosts:
+- host: https://mcp.public.com
+  documents:
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: public-oauth-protected-resource.json
+    note: >-
+      RFC 9728 OAuth 2.0 Protected Resource metadata for the hosted MCP server;
+      declares authorization server and scopes (trading.read, trading.write,
+      marketdata, openid).
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.public.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+  - path: /.well-known/openid-configuration
+    status: 302
+  - path: /.well-known/oauth-authorization-server
+    status: 302
+  - path: /.well-known/api-catalog
+    status: 302
+- host: https://public.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403

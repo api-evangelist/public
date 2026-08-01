@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://mcp.public.com/.well-known/oauth-protected-resource
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Hosted MCP server authorizes via OAuth 2.0; authorization server and scopes
+    declared in RFC 9728 protected-resource metadata.
+- id: oidc
+  conforms: true
+  evidence: openid scope advertised by the MCP OAuth server.
+- id: rfc9728-oauth-protected-resource
+  conforms: true
+  evidence: mcp.public.com serves /.well-known/oauth-protected-resource (200).
+- id: jwt-bearer
+  conforms: true
+  evidence: Trading API access tokens are bearer JWTs exchanged from a secret key.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json error envelope found in the public docs.
+- id: mcp
+  conforms: true
+  evidence: Publishes a hosted Model Context Protocol server at mcp.public.com/mcp.

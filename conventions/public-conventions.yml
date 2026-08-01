@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+source: https://public.com/api/docs/quickstart
+authentication:
+  style: bearer-jwt
+  detail: >-
+    Secret key (from account settings) exchanged for a short-lived access-token
+    JWT; sent as `Authorization: Bearer <token>`. See authentication/.
+  ref: authentication/public-authentication.yml
+base_url: https://api.public.com
+gateway_path: /userapigateway/trading/
+content_type: application/json
+versioning:
+  style: uri-path
+  detail: Resource-level versioning (portfolio v2, bars v2). See lifecycle/.
+  ref: lifecycle/public-lifecycle.yml
+error_handling:
+  style: http-status
+  detail: >-
+    Standard HTTP status codes with JSON response bodies (per the quickstart).
+    No RFC 9457 problem+json envelope observed in the public docs; no public
+    error-code registry located.
+idempotency:
+  supported: unknown
+  detail: >-
+    No documented idempotency-key header or contract found. Order placement has
+    dedicated `preflight` endpoints for pre-trade validation, but that is not an
+    idempotency mechanism.
+pagination:
+  style: unknown
+  detail: Not documented in the public quickstart/reference pages reviewed.
+rate_limits:
+  detail: Not documented in the public docs reviewed.
+realtime:
+  style: polling-subscription
+  detail: >-
+    The Python SDK exposes real-time price subscriptions via callbacks with
+    configurable polling frequency and pause/resume; no webhook or streaming
+    (AsyncAPI) surface is published.

@@ -1,7 +1,21 @@
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 aid: public
 name: Public
-description: 'Public is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Public (Public Holdings, Inc.) is a multi-asset investing platform where people
+  can trade stocks, ETFs, options, index options, crypto, bonds, and treasuries,
+  and hold IRAs, direct indexing, high-yield cash, and margin in one account.
+  Public positions itself as an "agentic brokerage" and ships a public Trading API
+  (api.public.com) that lets developers programmatically manage accounts, pull
+  market data, and place equity, crypto, and options orders with commission-free
+  execution and options rebates. It also operates a hosted, OAuth-secured MCP
+  server (mcp.public.com) so AI assistants like Claude and ChatGPT can query
+  portfolios and trade on a user's behalf, alongside an official Python SDK,
+  command-line interface, and Postman collection. Backed by Accel.
 url: https://raw.githubusercontent.com/api-evangelist/public/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,18 +23,117 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Consumer
-apis: []
+- Investing
+- Brokerage
+- Trading
+- Fintech
+- Stocks
+- Options
+- Crypto
+- Market Data
+- Agentic
+- MCP
+image: https://public.com/favicon.ico
+apis:
+- name: Public Trading API
+  description: >-
+    REST API for programmatic trading on Public — manage brokerage accounts, pull
+    portfolio and transaction history, retrieve market data (quotes, bars, option
+    chains, greeks), and place, replace, and cancel equity, crypto, and multi-leg
+    options orders. Authentication exchanges a long-lived secret key for a
+    short-lived bearer JWT access token.
+  humanURL: https://public.com/api/docs
+  baseURL: https://api.public.com
+  tags:
+  - Trading
+  - Market Data
+  - Brokerage
+  - Options
+  - Crypto
+  properties:
+  - type: Documentation
+    url: https://public.com/api/docs
+  - type: Quickstart
+    url: https://public.com/api/docs/quickstart
+  - type: Authentication
+    url: authentication/public-authentication.yml
+  - type: OAuthScopes
+    url: scopes/public-scopes.yml
+  - type: ChangeLog
+    url: https://public.com/api/docs/changelog
+  - type: SDKs
+    url: packages/public-packages.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/public-domain-security.yml
 - type: Website
-  url: http://www.public.com
+  url: https://public.com
+- type: DeveloperPortal
+  url: https://public.com/api
+- type: Documentation
+  url: https://public.com/api/docs
+- type: GettingStarted
+  url: https://public.com/api/docs/quickstart
+- type: ChangeLog
+  url: changelog/public-changelog.yml
+- type: SignUp
+  url: https://public.com/signup
+- type: Pricing
+  url: https://public.com/disclosures/fee-schedule
+- type: TermsOfService
+  url: https://public.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://public.com/privacy-policy
+- type: Support
+  url: https://help.public.com
+- type: Blog
+  url: https://public.com/learn
+- type: GitHubOrganization
+  url: https://github.com/PublicDotCom
+- type: Packages
+  url: packages/public-packages.yml
+- type: SDKs
+  url: packages/public-packages.yml
+- type: CLI
+  url: cli/public-cli.yml
+- type: MCPServer
+  url: mcp/public-mcp.yml
+- type: WellKnown
+  url: well-known/public-well-known.yml
+- type: LLMsTxt
+  url: llms/public-llms.txt
+- type: Authentication
+  url: authentication/public-authentication.yml
+- type: OAuthScopes
+  url: scopes/public-scopes.yml
+- type: Conventions
+  url: conventions/public-conventions.yml
+- type: Conformance
+  url: conformance/public-conformance.yml
+- type: Lifecycle
+  url: lifecycle/public-lifecycle.yml
+- type: Postman
+  url: https://github.com/PublicDotCom/postman-collection

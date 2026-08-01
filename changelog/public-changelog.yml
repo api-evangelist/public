@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: https://public.com/api/docs/changelog
+scheme: dated
+entries:
+- date: '2026-07-20'
+  type: addition
+  highlight: >-
+    Tax lot selling — view unrealized tax lots and control which lots are sold via
+    new endpoints and an optional `taxLotMatchingInstructions` field.
+- date: '2026-07-02'
+  type: addition
+  highlight: >-
+    Round-the-clock trading — set `equityMarketSession` to `TWENTY_FOUR_HOURS` for
+    24/5 market access.
+- date: '2026-06-25'
+  type: addition
+  highlight: >-
+    Hosted MCP server integration available for Claude and ChatGPT — connect
+    accounts directly for portfolio and trade management.
+- date: '2026-06-16'
+  type: addition
+  highlight: >-
+    Orders gained an optional `useMargin` parameter for cash-only evaluation;
+    historical data endpoints expanded with `TEN_YEARS` and `ALL` periods.
+- date: '2026-05-21'
+  type: addition
+  highlight: Stop-limit orders made available for equity trading.
+- date: '2026-05-20'
+  type: addition
+  highlight: >-
+    Multiple brokerage accounts supported for different strategies and AI agents.
+- date: '2026-05-19'
+  type: addition
+  highlight: >-
+    New endpoint for multi-leg option strategy quotes — simplifies spread and
+    straddle evaluation.
+- date: '2026-05-07'
+  type: addition
+  highlight: >-
+    Historical bar data endpoints released (daily through five-year timeframes,
+    OHLCV).
+- date: '2026-04-29'
+  type: addition
+  highlight: Command-line interface application released on GitHub.
+- date: '2026-04-23'
+  type: addition
+  highlight: Short selling made available through the API with documented examples.

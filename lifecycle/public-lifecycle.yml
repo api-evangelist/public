@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://public.com/api/docs
+versioning:
+  scheme: uri-path
+  notes: >-
+    Resource-level path versioning observed on the gateway (e.g. portfolio v2,
+    bars v2 endpoints under /userapigateway/trading/). No global vN prefix; new
+    capabilities are added additively per the changelog.
+  docs: https://public.com/api/docs
+changelog:
+  artifact: changelog/public-changelog.yml
+  docs: https://public.com/api/docs/changelog
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No formal deprecation/sunset policy located in the public docs.
+status_page:
+  url: null
+  notes: >-
+    No public status page found (status.public.com does not resolve). Public
+    markets a "99.994% uptime" figure on its API landing page but publishes no
+    status dashboard.
+sla:
+  url: null

@@ -1,0 +1,1 @@
+{"resource":"https://mcp.public.com","authorization_servers":["https://prod-api.154310543964.hellopublic.com/userapiauthservice/oauth2"],"bearer_methods_supported":["header"],"scopes_supported":["trading.read","trading.write","marketdata","openid"]}
