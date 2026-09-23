@@ -1,4 +1,4 @@
-generated: '2026-07-20'
+generated: '2026-09-19'
 method: searched
 source: live probes of /.well-known/ on Public hosts
 hosts:
@@ -7,10 +7,8 @@ hosts:
   - path: /.well-known/oauth-protected-resource
     status: 200
     file: public-oauth-protected-resource.json
-    note: >-
-      RFC 9728 OAuth 2.0 Protected Resource metadata for the hosted MCP server;
-      declares authorization server and scopes (trading.read, trading.write,
-      marketdata, openid).
+    note: RFC 9728 OAuth 2.0 Protected Resource metadata for the hosted MCP server; declares authorization
+      server and scopes (trading.read, trading.write, marketdata, openid).
   - path: /.well-known/openid-configuration
     status: 404
   - path: /.well-known/oauth-authorization-server
@@ -33,3 +31,23 @@ hosts:
     status: 403
   - path: /.well-known/openid-configuration
     status: 403
+- host: https://prod-api.154310543964.hellopublic.com
+  documents:
+  - path: /userapiauthservice/oauth2/.well-known/oauth-authorization-server
+    status: 200
+    file: public-prod-api-oauth-authorization-server.json
+    bytes: 1042
+  path_echo_control: passed
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
+  - host: https://prod-api.154310543964.hellopublic.com
+    path: /userapiauthservice/oauth2/.well-known/oauth-authorization-server
+    file: public-prod-api-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
