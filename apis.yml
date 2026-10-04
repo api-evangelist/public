@@ -60,8 +60,23 @@ tags:
 - Options
 - Crypto
 - Market Data
+- AI Agents
+- MCP
+- Financial Services
+tags_raw:
+- Company
+- Consumer
+- Investing
+- Brokerage
+- Trading
+- Fintech
+- Stocks
+- Options
+- Crypto
+- Market Data
 - Agentic
 - MCP
+- Financial Services
 image: https://public.com/favicon.ico
 apis:
 - name: Public Trading API
