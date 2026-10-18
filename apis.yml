@@ -58,7 +58,7 @@ tags:
 - Fintech
 - Stocks
 - Options
-- Crypto
+- Cryptocurrency
 - Market Data
 - AI Agents
 - MCP
@@ -89,6 +89,12 @@ apis:
   humanURL: https://public.com/api/docs
   baseURL: https://api.public.com
   tags:
+  - Trading
+  - Market Data
+  - Brokerage
+  - Options
+  - Cryptocurrency
+  tags_raw:
   - Trading
   - Market Data
   - Brokerage
