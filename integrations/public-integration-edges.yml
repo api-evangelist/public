@@ -99,6 +99,45 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-official-clis.py
   first_seen: '2026-10-20'
+- partner_name: FINRA (broker-dealer registration)
+  partner: null
+  partner_match: register-name
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://brokercheck.finra.org/firm/summary/127818
+  category: Broker-dealer
+  contract_reference:
+    register: FINRA BrokerCheck (api.brokercheck.finra.org firm search, the page's own public JSON)
+    standard: Securities Exchange Act of 1934 broker-dealer registration (FINRA member firm)
+    spec_file: null
+    role: finra-registered-broker-dealer
+    registered_name: OPEN TO THE PUBLIC INVESTING, INC.
+    other_names:
+    - LIQUID PRIME SERVICES INC.
+    - TACONIC CAPITAL GROUP INC.
+    - T3 SECURITIES, INC.
+    - PUBLIC INVESTING
+    - PUBLIC
+    - LIQUID PRIME SERVICES, INC.
+    register_id: CRD 127818
+    sec_file_number: 8-66049
+    registration_status: ACTIVE
+    main_office: NEW YORK, NY, USA
+    matched_domain: null
+    matched_by: register-name
+    register_name_note: BrokerCheck firm name 'OPEN TO THE PUBLIC INVESTING, INC.' normalises to public's apis.yml
+      name 'Public'
+    signal_note: 'participation only: broker-dealer registration is not a certification; disclosures and branch
+      counts are not recorded (breadth is not credit)'
+    detected_by: sweep-private-markets-fund-admin.py
+    detected: '2026-10-20'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-private-markets-fund-admin.py
+  first_seen: '2026-10-20'
 generated: '2026-10-18'
 method: searched
 source:
@@ -106,16 +145,25 @@ source:
 - https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
 checked:
 - https://api.nuget.org/v3
-- https://cdn.winget.microsoft.com/cache
 - https://crates.io/api/v1
-- https://formulae.brew.sh/api/cask.json
-- https://formulae.brew.sh/api/formula.json
-- https://github.com/ScoopInstaller/Extras
-- https://github.com/ScoopInstaller/Main
 - https://proxy.golang.org
 - https://pypi.org/pypi
 - https://registry.npmjs.org
 - https://repo1.maven.org/maven2
 - https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_19_2026.xml.gz
 - https://rubygems.org/api/v1
 - https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
+- https://cdn.winget.microsoft.com/cache
+- https://formulae.brew.sh/api/cask.json
+- https://formulae.brew.sh/api/formula.json
+- https://github.com/ScoopInstaller/Extras
+- https://github.com/ScoopInstaller/Main
+- https://brokercheck.finra.org/
+- https://ilpa.org/about-ilpa/member-directory/
+- https://ilpa.org/industry-guidance/templates-standards-model-documents/ilpa-templates-hub/template-endorsers/
+- https://ilpa.org/members
+- https://ilpa.org/wp-json/wp/v2/organization
+- https://www.cboe.com/market_data_services/vendors/
+- https://www.fixtrading.org/members/
+- https://www.sec.gov/foia/docs/form-adv-archive-data
