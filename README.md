@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Public is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+Public (Public Holdings, Inc.) is a multi-asset investing platform where people can trade stocks, ETFs, options, index options, crypto, bonds, and treasuries, and hold IRAs, direct indexing, high-yield cash, and margin in one account. Public positions itself as an "agentic brokerage" and ships a public Trading API (api.public.com) that lets developers programmatically manage accounts, pull market data, and place equity, crypto, and options orders with commission-free execution and options rebates. It also operates a hosted, OAuth-secured MCP server (mcp.public.com) so AI assistants like Claude and ChatGPT can query portfolios and trade on a user's behalf, alongside an official Python SDK, command-line interface, and Postman collection. Backed by Accel.
 
-Backed by: accel — http://www.public.com
+**Areas:** Company · Consumer · Investing · Brokerage · Trading · Fintech · Stocks · Options · Cryptocurrency · Market Data · AI Agents · MCP
+
+## Public on APIs.io
+
+Everything profiled for Public is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/public/](https://apis.io/providers/public/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Public Trading API](https://apis.io/apis/public/public-trading-api/) — REST API for programmatic trading on Public — manage brokerage accounts, pull portfolio and transaction history, retrieve market data (quotes, bars, option…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [public](https://apis.io/servers/public/public/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Public Authentication](https://apis.io/security/public/public-authentication/)
+- [Public Domain Security](https://apis.io/security/public/public-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Public Scopes](https://apis.io/scopes/public/public-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://public.com)
+- [Documentation](https://public.com/api/docs)
+- [Getting started](https://public.com/api/docs/quickstart)
+- [Pricing](https://public.com/disclosures/fee-schedule)
+- [Sign up](https://public.com/signup)
+- [Support](https://help.public.com)
+- [Blog](https://public.com/learn)
+- [Terms of service](https://public.com/terms-of-service)
+- [Privacy policy](https://public.com/privacy-policy)
+- [GitHub](https://github.com/PublicDotCom)
+
+## API Evangelist rating
+
+**Kin Score 36.6** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 69.0 |
+| Access clarity | 44.7 |
+
+**Agent readiness 23.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 32.4** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/public/](https://apis.io/providers/public/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Public: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/public/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
